@@ -1,0 +1,10 @@
+   37  dnf install python3
+   38  python
+   39  docker pull python
+   40  systemctl start docker
+   41  docker pull python
+   42  docker images
+   43  docker run -it python
+   44  ls
+   45  history
+   46  history 10 >day1.txt
