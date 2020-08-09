@@ -1,3 +1,39 @@
+    1  systemctl start docker
+    2  docker ps
+    3  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube
+    4  sudo mkdir -p /usr/local/bin/
+    5  sudo install minikube /usr/local/bin/
+    6  minikube start --driver=docker
+    7  minikube status
+    8  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+    9  [kubernetes]
+   10  name=Kubernetes
+   11  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+   12  enabled=1
+   13  gpgcheck=1
+   14  repo_gpgcheck=1
+   15  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   16  EOF
+   17  yum install -y kubectl
+   18  grep -E --color 'vmx|svm' /proc/cpuinfo
+   19  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube
+   20  sudo mkdir -p /usr/local/bin/
+   21  sudo install minikube /usr/local/bin/
+   22  minikube start --driver=docker
+   23  minikube start
+   24  sudo yum -y update
+   25  sudo yum -y install epel-release
+   26  sudo yum -y install libvirt qemu-kvm virt-install virt-top libguestfs-tools bridge-utils
+   27  sudo systemctl start libvirtd
+   28  wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   29  yum install docker kubernetes-client kubernetes-node etcd
+   30  minikube status
+   31  docker -V
+   32  minikube  start driver=docker
+   33  exit
+   34  exit
+   35  dnf install python3
+   36  python --version
    37  dnf install python3
    38  python
    39  docker pull python
@@ -8,3 +44,22 @@
    44  ls
    45  history
    46  history 10 >day1.txt
+   47  ls
+   48  cat day1.txt
+   49  git init
+   50  ls
+   51  mkdir mukesh
+   52  mkdir docker 
+   53  mv day1.txt docker
+   54  ls
+   55  cd docker
+   56  git init
+   57  git add .
+   58  git commit -m "python with docker cmd"
+   59  git add remote origin https://github.com/mkmahto2/git-command.git
+   60  git add remote origin https://github.com/mkmahto2/git-command.git
+   61  git remote add  origin https://github.com/mkmahto2/git-command.git
+   62  git push origin master
+   63  git push origin master
+   64  git push -f  origin master
+   65  history>day1.txt
